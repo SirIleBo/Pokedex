@@ -1,9 +1,25 @@
 "use strict";
 
-var _capitalize = _interopRequireDefault(require("capitalize"));
+var _Pokedex = _interopRequireDefault(require("./Pokedex"));
+
+var _Pokemon = _interopRequireDefault(require("./Pokemon"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-var firstName = (0, _capitalize["default"])('cyril');
-var greetings = "Hello ".concat(firstName);
-console.log(greetings);
+/**
+ * @example
+ *
+ * const myPokedex = new myPokedex();
+ * const pikachu = new Pokemon();
+ * const bulbizarre = new Pokemon();
+ *
+ * myPokedex.addPokemon(pikachu);
+ * myPokedex.addPokemon(bulbizarre);
+ *
+ */
+var myPokedex = new _Pokedex["default"]('cyril');
+myPokedex.welcome();
+myPokedex.display();
+var pikachu = new _Pokemon["default"]('pikachu');
+myPokedex.addPokemon(pikachu);
+myPokedex.display();

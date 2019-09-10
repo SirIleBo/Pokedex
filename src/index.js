@@ -1,6 +1,22 @@
-import capitalize from 'capitalize';
+import Pokedex from './Pokedex';
+import Pokemon from './Pokemon';
 
-const firstName = capitalize('cyril');
-const greetings = `Hello ${firstName}`;
+/**
+ * @example
+ *
+ * const myPokedex = new myPokedex();
+ * const pikachu = new Pokemon();
+ * const bulbizarre = new Pokemon();
+ *
+ * myPokedex.addPokemon(pikachu);
+ * myPokedex.addPokemon(bulbizarre);
+ *
+ */
 
-console.log(greetings);
+const myPokedex = new Pokedex('cyril');
+myPokedex.welcome();
+myPokedex.display();
+const pikachu = new Pokemon('pikachu');
+myPokedex.addPokemon(pikachu);
+
+myPokedex.display();
