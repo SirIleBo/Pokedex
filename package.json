@@ -1,0 +1,17 @@
+{
+  "name": "pokedex",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "cyril.bourdieu",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "devDependencies": {
+    "prettier": "^1.18.2"
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}
