@@ -14,9 +14,10 @@ import Pokemon from './Pokemon';
  */
 
 const myPokedex = new Pokedex('cyril');
-myPokedex.welcome();
-myPokedex.display();
 const pikachu = new Pokemon('pikachu');
+const salameche = new Pokemon('salameche');
+
 myPokedex.addPokemon(pikachu);
+myPokedex.addPokemon(salameche);
 
 myPokedex.display();

@@ -23,3 +23,6 @@ myPokedex.display();
 var pikachu = new _Pokemon["default"]('pikachu');
 myPokedex.addPokemon(pikachu);
 myPokedex.display();
+var salameche = new _Pokemon["default"]('salameche');
+myPokedex.addPokemon(salameche);
+myPokedex.display();

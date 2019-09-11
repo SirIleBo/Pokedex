@@ -28,14 +28,16 @@ function () {
   _createClass(Pokedex, [{
     key: "welcome",
     value: function welcome() {
-      console.log("Welcome ".concat(this.trainerName, "!"));
+      return "Welcome ".concat(this.trainerName, "!");
     }
   }, {
     key: "display",
     value: function display() {
-      this.pokemons.map(function (pokemon) {
-        return console.log(pokemon.name);
-      });
+      //this.pokemons.forEach(pokemon => console.log(pokemon.name));
+      var pokedexDisplay = this.pokemons.reduce(function (previousPokedexDisplay, pokemon) {
+        return "".concat(previousPokedexDisplay, "\n").concat(pokemon.name);
+      }, this.welcome());
+      console.log(pokedexDisplay);
     }
   }, {
     key: "addPokemon",

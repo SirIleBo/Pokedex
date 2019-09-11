@@ -6,7 +6,8 @@
     ]
   },
   "dependencies": {
-    "capitalize": "^2.0.0"
+    "capitalize": "^2.0.0",
+    "chalk": "^2.4.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
