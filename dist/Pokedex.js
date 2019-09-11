@@ -7,6 +7,8 @@ exports["default"] = void 0;
 
 var _capitalize = _interopRequireDefault(require("capitalize"));
 
+var _chalk = _interopRequireDefault(require("chalk"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -28,14 +30,13 @@ function () {
   _createClass(Pokedex, [{
     key: "welcome",
     value: function welcome() {
-      return "Welcome ".concat(this.trainerName, "!");
+      return _chalk["default"].blue("Welcome ".concat(this.trainerName, "!"));
     }
   }, {
     key: "display",
     value: function display() {
-      //this.pokemons.forEach(pokemon => console.log(pokemon.name));
       var pokedexDisplay = this.pokemons.reduce(function (previousPokedexDisplay, pokemon) {
-        return "".concat(previousPokedexDisplay, "\n").concat(pokemon.name);
+        return "".concat(previousPokedexDisplay, "\n").concat(pokemon.display());
       }, this.welcome());
       console.log(pokedexDisplay);
     }

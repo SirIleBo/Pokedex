@@ -3,9 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports["default"] = void 0;
+exports.pokemonTypes = exports["default"] = void 0;
 
 var _capitalize = _interopRequireDefault(require("capitalize"));
+
+var _chalk = _interopRequireDefault(require("chalk"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -18,10 +20,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 var Pokemon =
 /*#__PURE__*/
 function () {
-  function Pokemon(name) {
+  function Pokemon(name, type) {
     _classCallCheck(this, Pokemon);
 
     this.name = (0, _capitalize["default"])(name);
+    this.type = type;
   }
 
   _createClass(Pokemon, [{
@@ -29,9 +32,27 @@ function () {
     value: function attack() {
       console.info("".concat(this.name, " attack !"));
     }
+  }, {
+    key: "display",
+    value: function display() {
+      var name = _chalk["default"][this.type.color]("".concat(this.name));
+
+      return "".concat(name, " is a ").concat(this.type.name);
+    }
   }]);
 
   return Pokemon;
 }();
 
 exports["default"] = Pokemon;
+var pokemonTypes = {
+  pikachu: {
+    name: 'Pikachu',
+    color: 'yellow'
+  },
+  salameche: {
+    name: 'Salameche',
+    color: 'red'
+  }
+};
+exports.pokemonTypes = pokemonTypes;

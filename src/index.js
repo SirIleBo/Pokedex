@@ -1,5 +1,6 @@
 import Pokedex from './Pokedex';
-import Pokemon from './Pokemon';
+import Pikachu from './Pikachu';
+import Salameche from './Salameche';
 
 /**
  * @example
@@ -13,11 +14,11 @@ import Pokemon from './Pokemon';
  *
  */
 
-const myPokedex = new Pokedex('cyril');
-const pikachu = new Pokemon('pikachu');
-const salameche = new Pokemon('salameche');
+const myPokedex = new Pokedex("trou d'balle");
+const john = new Pikachu('premièreDaube'); //pikachu
+const paolo = new Salameche('badass'); //salameche
 
-myPokedex.addPokemon(pikachu);
-myPokedex.addPokemon(salameche);
+myPokedex.addPokemon(john);
+myPokedex.addPokemon(paolo);
 
 myPokedex.display();

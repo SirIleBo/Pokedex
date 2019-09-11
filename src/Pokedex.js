@@ -1,4 +1,5 @@
 import capitalize from 'capitalize';
+import chalk from 'chalk';
 
 export default class Pokedex {
   constructor(name) {
@@ -7,13 +8,13 @@ export default class Pokedex {
   }
 
   welcome() {
-    return `Welcome ${this.trainerName}!`;
+    return chalk.blue(`Welcome ${this.trainerName}!`);
   }
 
   display() {
     const pokedexDisplay = this.pokemons.reduce(
       (previousPokedexDisplay, pokemon) =>
-        `${previousPokedexDisplay}\n${pokemon.name}`,
+        `${previousPokedexDisplay}\n${pokemon.display()}`,
       this.welcome()
     );
     console.log(pokedexDisplay);

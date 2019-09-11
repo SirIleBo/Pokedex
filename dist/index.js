@@ -2,7 +2,9 @@
 
 var _Pokedex = _interopRequireDefault(require("./Pokedex"));
 
-var _Pokemon = _interopRequireDefault(require("./Pokemon"));
+var _Pikachu = _interopRequireDefault(require("./Pikachu"));
+
+var _Salameche = _interopRequireDefault(require("./Salameche"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
@@ -17,12 +19,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
  * myPokedex.addPokemon(bulbizarre);
  *
  */
-var myPokedex = new _Pokedex["default"]('cyril');
-myPokedex.welcome();
-myPokedex.display();
-var pikachu = new _Pokemon["default"]('pikachu');
-myPokedex.addPokemon(pikachu);
-myPokedex.display();
-var salameche = new _Pokemon["default"]('salameche');
-myPokedex.addPokemon(salameche);
+var myPokedex = new _Pokedex["default"]("trou d'balle");
+var john = new _Pikachu["default"]('premièreDaube'); //pikachu
+
+var paolo = new _Salameche["default"]('badass'); //salameche
+
+myPokedex.addPokemon(john);
+myPokedex.addPokemon(paolo);
 myPokedex.display();
