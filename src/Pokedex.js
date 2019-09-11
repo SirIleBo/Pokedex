@@ -7,11 +7,16 @@ export default class Pokedex {
   }
 
   welcome() {
-    console.log(`Welcome ${this.trainerName}!`);
+    return `Welcome ${this.trainerName}!`;
   }
 
   display() {
-    this.pokemons.forEach(pokemon => console.log(pokemon.name));
+    const pokedexDisplay = this.pokemons.reduce(
+      (previousPokedexDisplay, pokemon) =>
+        `${previousPokedexDisplay}\n${pokemon.name}`,
+      this.welcome()
+    );
+    console.log(pokedexDisplay);
   }
 
   addPokemon(pokemon) {
